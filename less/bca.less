@@ -1,0 +1,32 @@
+a, button {
+    cursor: pointer;
+}
+.navbar-wrapper .navbar {
+    top: 29px;
+    border-radius: 0px;
+}
+
+#social-bar {
+    // background: #222;
+    background: #222;
+    height: 29px;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    z-index: @zindex-navbar;
+    width: 100%;
+}   
+
+#destaques {
+    background: @brand-primary;    
+    height: @xggg;
+    position: relative;
+    top: -29px;
+    display: flex;
+    justify-content: space-between;
+    .col {
+        flex-direction: col;
+        flex: 1 1 25%;
+        text-align: center;
+    }
+}
