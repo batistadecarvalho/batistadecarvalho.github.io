@@ -7,14 +7,25 @@ a, button {
 }
 
 #social-bar {
-    // background: #222;
-    background: #222;
+    background: @brand-primary;
     height: 29px;
     display: flex;
     justify-content: flex-end;
     position: fixed;
     z-index: @zindex-navbar;
     width: 100%;
+    .social-icon {
+        margin: 0 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            color: @white;
+            &:hover {
+                color: @brand-info;
+            }
+        }
+    }
 }   
 
 #destaques {
@@ -24,9 +35,46 @@ a, button {
     top: -29px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    // box-shadow: 0 0 7px 3px @gray-darker;
     .col {
         flex-direction: col;
         flex: 1 1 25%;
-        text-align: center;
+        text-align: center;        
+        justify-content: center;     
+        color: @white;
+        h2, h4 {
+            margin: @pp auto;
+        }   
     }
 }
+
+.carousel-inner {
+    .item:nth-child(1) {
+        background: url('@{img}/lawyer.jpeg') center/cover no-repeat;
+    }
+    .item:nth-child(2) {
+        background: url('@{img}/escritorio.jpeg') center/cover no-repeat;
+    }
+    .item:nth-child(3) {
+        background: url('@{img}/business.jpeg') center/cover no-repeat;
+    }
+}
+
+//ScrollBar 
+/* width */
+::-webkit-scrollbar {
+	width: 7px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: @gray-base; 
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: @gray-dark; 
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: @brand-primary; 
+  }
