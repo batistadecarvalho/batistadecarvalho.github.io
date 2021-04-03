@@ -1,32 +1,106 @@
+html, body {
+    overflow-x:hidden;
+}
 a, button {
     cursor: pointer;
 }
 .navbar-wrapper .navbar {
     top: 29px;
     border-radius: 0px;
+    height: 100px;
+    .navbar-right {
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+}
+.navbar-brand {
+    padding: 4px 15px;
+    img {
+        height: 88px;
+    }
 }
 
 #social-bar {
-    // background: #222;
-    background: #222;
+    background: @brand-primary;
     height: 29px;
     display: flex;
     justify-content: flex-end;
     position: fixed;
     z-index: @zindex-navbar;
     width: 100%;
+    .social-icon {
+        margin: 0 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a {
+            color: @white;
+            &:hover {
+                color: @brand-info;
+            }
+        }
+    }
 }   
-
+.carousel-inner {
+    .item:nth-child(1) {
+        background: url('@{img}/lawyer.jpeg') center/cover no-repeat;
+    }
+    .item:nth-child(2) {
+        background: url('@{img}/escritorio.jpeg') center/cover no-repeat;
+    }
+    .item:nth-child(3) {
+        background: url('@{img}/business.jpeg') center/cover no-repeat;
+    }
+}
+/////////////////////////////////////////////////////////
+// SECTIONS // /////////////////////////////////////////
+///////////////////////////////////////////////////////
 #destaques {
-    background: @brand-primary;    
     height: @xggg;
     position: relative;
     top: -29px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    background: @brand-primary;            
     .col {
         flex-direction: col;
         flex: 1 1 25%;
-        text-align: center;
+        text-align: center;        
+        justify-content: center;     
+        // color: darken(@brand-warning, 7%);
+        color: @white;
+        // transform: rotate(45deg);
+        border-right: .3px ridge @azul;
+        &:last-child {
+            border-right: none;
+        }
+        h2, h4 {
+            // transform: rotate(-45deg);
+            margin: @pp auto;
+        }   
     }
 }
+#marketing {
+    margin-top: 50px;
+}
+
+
+//ScrollBar 
+/* width */
+::-webkit-scrollbar {
+	width: 7px;
+  }
+  /* Track */
+  ::-webkit-scrollbar-track {
+	background: @gray-base; 
+  }
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+	background: @gray-dark; 
+  }
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+	background: @brand-primary; 
+  }

@@ -14,7 +14,7 @@
   position: relative;
   min-height: @navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: @navbar-margin-bottom;
-  border: 1px solid transparent;
+  border: 1.5px solid transparent;
 
   // Prevent floats from breaking the navbar
   &:extend(.clearfix all);
@@ -394,7 +394,8 @@
 // Default navbar
 .navbar-default {
   background-color: @navbar-default-bg;
-  border-color: @navbar-default-border;
+  // border-color: @navbar-default-border;
+  border-bottom: 3px ridge @navbar-default-border;
 
   .navbar-brand {
     color: @navbar-default-brand-color;
@@ -412,19 +413,28 @@
   .navbar-nav {
     > li > a {
       color: @navbar-default-link-color;
-
+      text-transform: uppercase;
+      font-weight: 900;      
       &:hover,
       &:focus {
         color: @navbar-default-link-hover-color;
         background-color: @navbar-default-link-hover-bg;
       }
     }
-    > .active > a {
-      &,
-      &:hover,
-      &:focus {
-        color: @navbar-default-link-active-color;
-        background-color: @navbar-default-link-active-bg;
+    > .active {      
+      > a {         
+        &,
+        &:hover,
+        &:focus {
+          color: @navbar-default-link-active-color;   
+          // text-decoration: underline;
+          width: auto; 
+          height: 100px; 
+          border-left: 3px solid transparent;
+          border-right: 3px solid transparent;            
+          border-bottom: 5px ridge @brand-warning;                    
+          // background-color: @navbar-default-link-active-bg;
+        }
       }
     }
     > .disabled > a {
@@ -463,7 +473,7 @@
           &:hover,
           &:focus {
             color: @navbar-default-link-active-color;
-            background-color: @navbar-default-link-active-bg;
+            // background-color: @navbar-default-link-active-bg;
           }
         }
         > .disabled > a {
@@ -556,7 +566,7 @@
       &:hover,
       &:focus {
         color: @navbar-inverse-link-active-color;
-        background-color: @navbar-inverse-link-active-bg;
+        // background-color: @navbar-inverse-link-active-bg;
       }
     }
     > .disabled > a {
@@ -600,7 +610,7 @@
           &:hover,
           &:focus {
             color: @navbar-inverse-link-active-color;
-            background-color: @navbar-inverse-link-active-bg;
+            // background-color: @navbar-inverse-link-active-bg;
           }
         }
         > .disabled > a {
