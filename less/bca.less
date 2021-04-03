@@ -1,9 +1,24 @@
+html, body {
+    overflow-x:hidden;
+}
 a, button {
     cursor: pointer;
 }
 .navbar-wrapper .navbar {
     top: 29px;
     border-radius: 0px;
+    height: 100px;
+    .navbar-right {
+        height: 100px;
+        display: flex;
+        align-items: center;
+    }
+}
+.navbar-brand {
+    padding: 4px 15px;
+    img {
+        height: 88px;
+    }
 }
 
 #social-bar {
@@ -27,28 +42,6 @@ a, button {
         }
     }
 }   
-
-#destaques {
-    background: @brand-primary;    
-    height: @xggg;
-    position: relative;
-    top: -29px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    // box-shadow: 0 0 7px 3px @gray-darker;
-    .col {
-        flex-direction: col;
-        flex: 1 1 25%;
-        text-align: center;        
-        justify-content: center;     
-        color: @white;
-        h2, h4 {
-            margin: @pp auto;
-        }   
-    }
-}
-
 .carousel-inner {
     .item:nth-child(1) {
         background: url('@{img}/lawyer.jpeg') center/cover no-repeat;
@@ -60,6 +53,39 @@ a, button {
         background: url('@{img}/business.jpeg') center/cover no-repeat;
     }
 }
+/////////////////////////////////////////////////////////
+// SECTIONS // /////////////////////////////////////////
+///////////////////////////////////////////////////////
+#destaques {
+    height: @xggg;
+    position: relative;
+    top: -29px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: @brand-primary;            
+    .col {
+        flex-direction: col;
+        flex: 1 1 25%;
+        text-align: center;        
+        justify-content: center;     
+        // color: darken(@brand-warning, 7%);
+        color: @white;
+        // transform: rotate(45deg);
+        border-right: .3px ridge @azul;
+        &:last-child {
+            border-right: none;
+        }
+        h2, h4 {
+            // transform: rotate(-45deg);
+            margin: @pp auto;
+        }   
+    }
+}
+#marketing {
+    margin-top: 50px;
+}
+
 
 //ScrollBar 
 /* width */

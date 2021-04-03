@@ -194,7 +194,7 @@
     display: inline-block;
     width: 10px;
     height: 10px;
-    margin: 1px;
+    margin: 4px;
     text-indent: -999px;
     cursor: pointer;
     // IE8-9 hack for event handling
@@ -209,14 +209,15 @@
     background-color: #000 \9; // IE8
     background-color: rgba(0, 0, 0, 0); // IE9
 
-    border: 1px solid @carousel-indicator-border-color;
-    border-radius: 10px;
+    border: 2px ridge @carousel-indicator-border-color;
+    // border-radius: 10px;
+    transform: rotate(45deg);
   }
 
   .active {
     width: 12px;
     height: 12px;
-    margin: 0;
+    margin: 4px;
     background-color: @carousel-indicator-active-bg;
   }
 }
