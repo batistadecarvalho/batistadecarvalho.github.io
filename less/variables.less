@@ -26,6 +26,16 @@
 @brand-danger:          #ff1a1a;
 @vinho:                 #520707;
 
+// degrades
+.degrade-cinza {    
+    background: #f3f4f2; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #ededed 0%,#fdfdfd 20%,#ffffff 49%,#fdfdfd 80%,#ededed 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #ededed 0%,#fdfdfd 20%,#ffffff 49%,#fdfdfd 80%,#ededed 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cecece', endColorstr='#cecece',GradientType=0 ); /* IE6-9 */
+
+}
+
 // Sizes padrão
 @pp:    0.4375em; //7px
 @pq:    0.875em; //14px
@@ -35,6 +45,7 @@
 @ggg:    3.625em; // 58px
 @xgg:    6.25em; // 100px
 @xggg:    9.625em; // 154px
+
 
 
 //== Scaffolding
@@ -58,8 +69,10 @@
 //== Typography
 //
 //## Font, line-height, and color for body text, headings, and more.
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font-family-sans-serif:  'Poppins', sans-serif;
 @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
@@ -387,7 +400,7 @@
 
 // Navbar links
 @navbar-default-link-color:                @gray;
-@navbar-default-link-hover-color:          lighten(@azul, 14%);
+@navbar-default-link-hover-color:          darken(@brand-warning, 7%);
 @navbar-default-link-hover-bg:             transparent;
 @navbar-default-link-active-color:         @brand-primary;
 @navbar-default-link-active-bg:            darken(@navbar-default-bg, 6.5%);

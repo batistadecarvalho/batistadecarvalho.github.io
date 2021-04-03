@@ -1,5 +1,6 @@
 html, body {
     overflow-x:hidden;
+    scroll-behavior: smooth;
 }
 a, button {
     cursor: pointer;
@@ -83,8 +84,46 @@ a, button {
     }
 }
 #marketing {
-    margin-top: 50px;
+    margin-top: 50px;    
 }
+#motivos {
+    hr {
+        border-bottom: 2px ridge @brand-warning;
+    }
+    h2 {
+        color: @azul;
+        .text-muted {
+            // color: @brand-info;
+        }
+    }
+
+}
+footer {
+
+}
+// hexagono
+.hexagon {
+    position: relative;
+    width: 200px;
+    height: 120px;
+    background: @azul;
+    margin: 144px auto;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left:0;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;              
+    }
+    &::before {
+        bottom: 100%;
+        border-bottom: 50px solid @azul;
+      }
+    &::after {
+        top: 100%;
+        border-top: 50px solid @azul;
+      }  
+  }
 
 
 //ScrollBar 

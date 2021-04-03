@@ -4,6 +4,146 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+.degrade-cinza {
+  background: #f3f4f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), color-stop(20%, #fdfdfd), color-stop(49%, #ffffff), color-stop(80%, #fdfdfd), to(#ededed));
+  background: -o-linear-gradient(top, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
+  background: linear-gradient(to bottom, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece', endColorstr='#cecece', GradientType=0);
+  /* IE6-9 */
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiAyp8kv8JHgFVrJJLmE3tF.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLmv1plEA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLm21llEA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiGyp8kv8JHgFVrJJLedw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLmg1hlEA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLmr19lEA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLmy15lEA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLm111lEA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiDyp8kv8JHgFVrJJLm81xlEA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiGyp8kv8JHgFVrLPTedw.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLFj_V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDz8V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLDD4V1s.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v15/pxiByp8kv8JHgFVrLBT5V1s.ttf) format('truetype');
+}
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -1079,7 +1219,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #444444;
@@ -3544,18 +3684,19 @@ input[type="button"].btn-block {
   border: 2px solid white;
   border-radius: 0px;
   color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   -webkit-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
-.bt-branco:hover {
+.bt-branco:hover,
+.bt-branco:focus {
   background: white;
   border: 2px solid white;
   border-radius: 0px;
   color: #070752;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   -webkit-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
@@ -3566,18 +3707,19 @@ input[type="button"].btn-block {
   border: 2px solid #040431;
   border-radius: 0px;
   color: #040431;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   -webkit-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
-.bt-primario:hover {
+.bt-primario:hover,
+.bt-primario:focus {
   background: #040431;
   border: 2px solid #040431;
   border-radius: 0px;
   color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   -webkit-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
@@ -3588,18 +3730,19 @@ input[type="button"].btn-block {
   border: 2px solid #3BFF1F;
   border-radius: 0px;
   color: #3BFF1F;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   -webkit-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
-.bt-sucesso:hover {
+.bt-sucesso:hover,
+.bt-sucesso:focus {
   background: #3BFF1F;
   border: 2px solid #3BFF1F;
   border-radius: 0px;
   color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   -webkit-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
@@ -4634,6 +4777,18 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-default {
   background-color: #f8f8f8;
+  background: #f3f4f2;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#ededed), color-stop(20%, #fdfdfd), color-stop(49%, #ffffff), color-stop(80%, #fdfdfd), to(#ededed));
+  background: -o-linear-gradient(top, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
+  background: linear-gradient(to bottom, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece', endColorstr='#cecece', GradientType=0);
+  /* IE6-9 */
   border-bottom: 3px ridge #f5be00;
 }
 .navbar-default .navbar-brand {
@@ -4650,11 +4805,17 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > li > a {
   color: #666666;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 600;
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #0d0d94;
+  -webkit-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.3s;
+  color: #f2bc00;
   background-color: transparent;
 }
 .navbar-default .navbar-nav > .active > a,
@@ -4685,7 +4846,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #0d0d94;
+    color: #f2bc00;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
@@ -4718,14 +4879,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   color: #666666;
 }
 .navbar-default .navbar-link:hover {
-  color: #0d0d94;
+  color: #f2bc00;
 }
 .navbar-default .btn-link {
   color: #666666;
 }
 .navbar-default .btn-link:hover,
 .navbar-default .btn-link:focus {
-  color: #0d0d94;
+  color: #f2bc00;
 }
 .navbar-default .btn-link[disabled]:hover,
 fieldset[disabled] .navbar-default .btn-link:hover,
@@ -6129,7 +6290,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.42857143;
@@ -6247,7 +6408,7 @@ button.close {
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.42857143;
@@ -6580,6 +6741,7 @@ button.close {
 .carousel-caption h1 {
   text-transform: uppercase;
   font-size: 3.625em;
+  font-weight: 700;
 }
 .carousel-caption p {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -6915,6 +7077,7 @@ button.close {
 html,
 body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 a,
 button {
@@ -7019,6 +7182,35 @@ button {
 }
 #marketing {
   margin-top: 50px;
+}
+#motivos hr {
+  border-bottom: 2px ridge #ffcb17;
+}
+#motivos h2 {
+  color: #070752;
+}
+.hexagon {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  background: #070752;
+  margin: 144px auto;
+}
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+}
+.hexagon::before {
+  bottom: 100%;
+  border-bottom: 50px solid #070752;
+}
+.hexagon::after {
+  top: 100%;
+  border-top: 50px solid #070752;
 }
 /* width */
 ::-webkit-scrollbar {

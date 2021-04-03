@@ -179,19 +179,19 @@ input[type="button"] {
 
 .bt-branco {
   .bt-ghost(transparent, 2px solid @white, @white);
-  &:hover {
+  &:hover, &:focus {
     .bt-ghost(@white, 2px solid @white, @azul);   
   }
 }
 .bt-primario {
   .bt-ghost(transparent, 2px solid @brand-primary, @brand-primary);
-  &:hover {
+  &:hover, &:focus {
     .bt-ghost(@brand-primary, 2px solid @brand-primary, @white);   
   }
 }
 .bt-sucesso {
   .bt-ghost(transparent, 2px solid @brand-success, @brand-success);
-  &:hover {
+  &:hover, &:focus {
     .bt-ghost(@brand-success, 2px solid @brand-success, @white);   
   }
 }
