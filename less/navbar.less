@@ -325,7 +325,8 @@
 
 // Menu position and menu carets
 .navbar-nav > li > .dropdown-menu {
-  margin-top: 0;
+  margin-top: -1px;
+  border-top: 1px groove @brand-warning;
   .border-top-radius(0);
 }
 // Menu position and menu caret support for dropups via extra dropup class
@@ -456,7 +457,7 @@
       &:hover,
       &:focus {
         color: @navbar-default-link-active-color;
-        background-color: @navbar-default-link-active-bg;
+        background-color: @gray-lighter;
       }
     }
 

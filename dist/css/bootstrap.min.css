@@ -4,6 +4,11 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 @import url('https://use.fontawesome.com/releases/v5.7.2/css/all.css');
+.anima {
+  -webkit-transition: 0.3s ease-in-out all;
+  -o-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+}
 .degrade-cinza {
   background: #f3f4f2;
   /* Old browsers */
@@ -15,8 +20,36 @@
   background: -o-linear-gradient(top, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
   background: linear-gradient(to bottom, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece', endColorstr='#cecece', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff', GradientType=0);
   /* IE6-9 */
+}
+.degrade-azul {
+  background: #040431;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #040431 0%, #070752 49%, #040431 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, #040431 0%, #070752 49%, #040431 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -webkit-gradient(linear, left top, left bottom, from(#040431), color-stop(49%, #070752), to(#040431));
+  background: -o-linear-gradient(top, #040431 0%, #070752 49%, #040431 100%);
+  background: linear-gradient(to bottom, #040431 0%, #070752 49%, #040431 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@brand-primary', endColorstr='@azul', GradientType=0);
+  /* IE6-9 */
+}
+.degrade-radial-azul {
+  -webkit-transition: 0.3s ease-in-out all;
+  -o-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+  background: #040431;
+  /* Old browsers */
+  background: -moz-radial-gradient(#070752 0%, #040431 79%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(#070752 0%, #040431 79%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -o-radial-gradient(#070752 0%, #040431 79%);
+  background: radial-gradient(#070752 0%, #040431 79%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
 @font-face {
   font-family: 'Poppins';
@@ -3692,8 +3725,8 @@ input[type="button"].btn-block {
 }
 .bt-branco:hover,
 .bt-branco:focus {
-  background: white;
-  border: 2px solid white;
+  background: #ffcb17;
+  border: 2px solid #ffcb17;
   border-radius: 0px;
   color: #070752;
   font-family: 'Poppins', sans-serif;
@@ -3782,6 +3815,146 @@ tbody.collapse.in {
   -webkit-transition-timing-function: ease;
   -o-transition-timing-function: ease;
   transition-timing-function: ease;
+}
+@-webkit-keyframes tremida {
+  0% {
+    left: 0px;
+    top: 0px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    left: 2px;
+    top: -1px;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  50% {
+    left: 0px;
+    top: 0px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  75% {
+    left: -2px;
+    top: 1px;
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@keyframes tremida {
+  0% {
+    left: 0px;
+    top: 0px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  25% {
+    left: 2px;
+    top: -1px;
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  50% {
+    left: 0px;
+    top: 0px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  75% {
+    left: -2px;
+    top: 1px;
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes cresce {
+  0% {
+    width: 0%;
+    height: auto;
+  }
+  25% {
+    width: 40%;
+    height: auto;
+  }
+  50% {
+    width: 70%;
+    height: auto;
+  }
+  75% {
+    width: 110%;
+    height: auto;
+  }
+  100% {
+    width: 100%;
+    height: auto;
+  }
+}
+@keyframes cresce {
+  0% {
+    width: 0%;
+    height: auto;
+  }
+  25% {
+    width: 40%;
+    height: auto;
+  }
+  50% {
+    width: 70%;
+    height: auto;
+  }
+  75% {
+    width: 110%;
+    height: auto;
+  }
+  100% {
+    width: 100%;
+    height: auto;
+  }
 }
 .caret {
   display: inline-block;
@@ -4729,7 +4902,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav > li > .dropdown-menu {
-  margin-top: 0;
+  margin-top: -1px;
+  border-top: 1px groove #ffcb17;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
@@ -4787,7 +4961,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background: -o-linear-gradient(top, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
   background: linear-gradient(to bottom, #ededed 0%, #fdfdfd 20%, #ffffff 49%, #fdfdfd 80%, #ededed 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cecece', endColorstr='#cecece', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff', GradientType=0);
   /* IE6-9 */
   border-bottom: 3px ridge #f5be00;
 }
@@ -4838,7 +5012,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #040431;
-  background-color: #e7e7e7;
+  background-color: #ffffff;
 }
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -6666,13 +6840,13 @@ button.close {
   color: #fff;
   text-decoration: none;
   outline: 0;
-  filter: alpha(opacity=90);
-  opacity: 0.9;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
 }
 .carousel-control .icon-prev,
 .carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-left,
-.carousel-control .glyphicon-chevron-right {
+.carousel-control .fa-chevron-left,
+.carousel-control .fa-chevron-right {
   position: absolute;
   top: 50%;
   z-index: 5;
@@ -6680,14 +6854,14 @@ button.close {
   margin-top: -10px;
 }
 .carousel-control .icon-prev,
-.carousel-control .glyphicon-chevron-left {
+.carousel-control .fa-chevron-left {
   left: 50%;
-  margin-left: -10px;
+  margin-left: -30px;
 }
 .carousel-control .icon-next,
-.carousel-control .glyphicon-chevron-right {
+.carousel-control .fa-chevron-right {
   right: 50%;
-  margin-right: -10px;
+  margin-right: -30px;
 }
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
@@ -7101,7 +7275,8 @@ button {
   padding: 4px 15px;
 }
 .navbar-brand img {
-  height: 88px;
+  height: 75px;
+  margin: 7px auto;
 }
 #social-bar {
   background: #040431;
@@ -7134,6 +7309,10 @@ button {
 #social-bar .social-icon a:hover {
   color: #1AB3FF;
 }
+#social-bar .social-icon.telefone {
+  color: white;
+  font-size: 11px;
+}
 .carousel-inner .item:nth-child(1) {
   background: url('../img/lawyer.jpeg') center / cover no-repeat;
 }
@@ -7159,6 +7338,9 @@ button {
   background: #040431;
 }
 #destaques .col {
+  -webkit-transition: 0.3s ease-in-out all;
+  -o-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: col;
@@ -7179,8 +7361,36 @@ button {
 #destaques .col h2,
 #destaques .col h4 {
   margin: 0.4375em auto;
+  -webkit-transition: 0.3s ease-in-out all;
+  -o-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+}
+#destaques .col:hover {
+  background: #040431;
+  /* Old browsers */
+  background: -moz-radial-gradient(#070752 0%, #040431 79%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(#070752 0%, #040431 79%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: -o-radial-gradient(#070752 0%, #040431 79%);
+  background: radial-gradient(#070752 0%, #040431 79%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  -webkit-transition: 0.3s ease-in-out all;
+  -o-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all;
+}
+#destaques .col:hover h2 {
+  font-size: 34px;
+  -webkit-animation: tremida 0.5s ease-in-out 0s 1 normal;
+  animation: tremida 0.5s ease-in-out 0s 1 normal;
+}
+#destaques .col:hover h4 {
+  letter-spacing: 0.05em;
 }
 #marketing {
+  margin-top: 50px;
+}
+#motivos {
   margin-top: 50px;
 }
 #motivos hr {
