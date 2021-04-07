@@ -250,12 +250,14 @@
       box-shadow: none;
       > li > a,
       .dropdown-header {
-        padding: 5px 15px 5px 25px;
+        padding: 10px 15px 15px 25px;
       }
       > li > a {
         line-height: @line-height-computed;
         &:hover,
         &:focus {
+          color: @azul;
+          background-color: @brand-warning;
           background-image: none;
         }
       }
@@ -326,8 +328,11 @@
 // Menu position and menu carets
 .navbar-nav > li > .dropdown-menu {
   margin-top: -1px;
-  border-top: 1px groove @brand-warning;
+  border-top: 2px groove @brand-warning;
+  // background-color: @brand-warning;
+  .degrade-cinza();
   .border-top-radius(0);
+  animation: fadeIn .5s ease-in-out 0s 1 normal;
 }
 // Menu position and menu caret support for dropups via extra dropup class
 .navbar-fixed-bottom .navbar-nav > li > .dropdown-menu {
@@ -453,12 +458,13 @@
     // Dropdown menu items
     // Remove background color from open dropdown
     > .open > a {
+      position: relative;
       &,
       &:hover,
       &:focus {
         color: @navbar-default-link-active-color;
-        background-color: @gray-lighter;
-      }
+        background-color: transparent;
+      }      
     }
 
     @media (max-width: @grid-float-breakpoint-max) {
@@ -468,8 +474,8 @@
           color: @navbar-default-link-color;
           &:hover,
           &:focus {
-            color: @navbar-default-link-hover-color;
-            background-color: @navbar-default-link-hover-bg;
+            color: @azul;
+            background-color: @brand-warning
           }
         }
         > .active > a {
@@ -605,8 +611,8 @@
           color: @navbar-inverse-link-color;
           &:hover,
           &:focus {
-            color: @navbar-inverse-link-hover-color;
-            background-color: @navbar-inverse-link-hover-bg;
+            color: @azul;
+            background-color: @brand-warning;
           }
         }
         > .active > a {

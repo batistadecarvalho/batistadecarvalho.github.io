@@ -54,7 +54,14 @@
     background: -webkit-radial-gradient(@azul 0%,@brand-primary 79%); /* Chrome10-25,Safari5.1-6 */
     background: radial-gradient(@azul 0%,@brand-primary 79%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 }
-
+.degrade-dourado {
+    background: #d09000; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #d09000 0%, #ffcb17 19%, #fff045 51%, #ffcb17 73%, #d09000 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #d09000 0%,#ffcb17 19%,#fff045 51%,#ffcb17 73%,#d09000 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #d09000 0%,#ffcb17 19%,#fff045 51%,#ffcb17 73%,#d09000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d09000', endColorstr='#d09000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+@degrade-dourado: .degrade-dourado();
 // Sizes padrão
 @pp:    0.4375em; //7px
 @pq:    0.875em; //14px
@@ -413,8 +420,8 @@
 @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 @navbar-collapse-max-height:       340px;
 
-@navbar-default-color:             #777;
-@navbar-default-bg:                #f8f8f8;
+@navbar-default-color:             @azul;
+@navbar-default-bg:                darken(@brand-warning, 6.5%);
 @navbar-default-border:            darken(@brand-warning, 6.5%);
 
 // Navbar links

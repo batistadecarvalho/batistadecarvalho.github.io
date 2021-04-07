@@ -14,6 +14,40 @@ a, button {
         display: flex;
         align-items: center;
     }
+    .dropdown-menu {
+        width: 600px;
+        height: auto;
+        padding: 12px 0;
+        left:0;
+        &::before {
+            content: "";
+            position: absolute;
+            left:75px;
+            top: -13px;
+            background: darken(@brand-warning, 7%);
+            width: 20px;
+            height: 10px;
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);                       
+        }
+        li { 
+            width: 50%;            
+            position: relative;            
+            &.dropdown-header {                
+                display:unset;
+                text-transform: uppercase;
+                font-weight: 600;
+                text-decoration: underline;                
+            }
+        }
+        li:nth-child(n+5) {            
+            right: -300px;
+            top: -98px;
+        }
+        > li > a:hover {
+            background-color: @brand-warning;
+            color: @azul;
+        }
+    }    
 }
 .navbar-brand {
     padding: 4px 15px;
@@ -49,6 +83,7 @@ a, button {
     }
 }   
 .carousel-inner {
+    border-bottom: 3px ridge @navbar-default-border;
     .item:nth-child(1) {
         background: url('@{img}/lawyer.jpeg') center/cover no-repeat;
     }
@@ -119,7 +154,27 @@ a, button {
 
 }
 footer {
-
+//  .degrade-azul;
+background-color: @brand-primary;
+ height: 75px;
+ display: flex;
+ justify-content: space-between;
+align-items: center;
+color: @white;
+p {
+    
+    flex-direction: col;
+        flex: 1 1 50%;
+        text-align: left;        
+        justify-content: left;     
+}
+a {    
+    color: @white;
+    flex-direction: col;
+        flex: 1 1 50%;
+        text-align: right;        
+        justify-content: flex-end;     
+  }
 }
 // hexagono
 .hexagon {
@@ -150,16 +205,22 @@ footer {
 /* width */
 ::-webkit-scrollbar {
 	width: 7px;
+    border-top-left-radius:50%;
+    border-top-right-radius:50%;
+    border-bottom-left-radius:50%;
+    border-bottom-right-radius:50%;
+    border-radius:50%;
+    height: auto;
   }
   /* Track */
   ::-webkit-scrollbar-track {
-	background: @gray-base; 
+	background: @gray-darker; 
   }
   /* Handle */
   ::-webkit-scrollbar-thumb {
-	background: @gray-dark; 
+	background: @gray; 
   }
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-	background: @brand-primary; 
+	background: @brand-warning; 
   }
