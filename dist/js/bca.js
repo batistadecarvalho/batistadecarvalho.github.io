@@ -1,21 +1,26 @@
 // social bar
 document.getElementById("social-bar").innerHTML = `
-<div class="social-icon">
+<div class="social-icon" title="Siga-nos no Instagram">
 <a>
   <i class="fab fa-instagram"></i>          
 </a>
 </div>
-<div class="social-icon">
+<div class="social-icon" title="Curta no Facebook">
 <a>
   <i class="fab fa-facebook"></i>
 </a>
 </div>
-<div class="social-icon">
+<div class="social-icon" title="Siga-nos no Linkedin">
 <a href="https://www.linkedin.com/in/levi-carvalho-7171b225/" target="_blank">
-  <i class="fab fa-linkedin"></i>
+<i class="fab fa-linkedin"></i>
 </a>
 </div>
-<div class="social-icon telefone">        
+<div class="social-icon" title="Envie um E-mail">
+<a href="mailto:levibatistadecarvalho@gmail.com?subject=Contato via site Batista de Carvalho&body=Inclua aqui seus questionamentos e dúvidas&bcc=levi.carvalho1@gmail.com" target="_blank">
+  <i class="fas fa-envelope-open-text"></i>
+</a>
+</div>
+<div class="social-icon telefone" title="Vamos bater um papo? (11) 985.775.279">        
   <i>(11) 985.775.279</i>        
 </div>
 `

@@ -4760,6 +4760,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   min-height: 100px;
   margin-bottom: 20px;
   border: 1.5px solid transparent;
+  -webkit-box-shadow: 0 3px 14px -2px #040431;
+  box-shadow: 0 3px 14px -2px #040431;
 }
 @media (min-width: 768px) {
   .navbar {
@@ -7074,7 +7076,6 @@ button.close {
 }
 .carousel-caption p {
   font-family: 'Libre Caslon Text', serif;
-  font-style: italic;
   font-size: 1.0625em;
 }
 .carousel-caption .btn {
@@ -7511,6 +7512,7 @@ button {
 #social-bar .social-icon.telefone {
   color: white;
   font-size: 11px;
+  cursor: pointer;
 }
 #myCarousel .carousel-inner {
   border-bottom: 3px ridge #f5be00;
@@ -7525,7 +7527,7 @@ button {
   background: url('../img/business.jpeg') center / cover no-repeat;
 }
 #depoimentos {
-  background: url('../img/bg-depoimento.png') repeat;
+  background: url('../img/pilares.jpg') no-repeat scroll center top rgba(0, 0, 0, 0);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7538,6 +7540,21 @@ button {
   height: 300px;
   border-top: 3px ridge #f2bc00;
   border-bottom: 3px ridge #f2bc00;
+  background-attachment: fixed !important;
+  background-size: cover !important;
+  margin-bottom: 80px;
+  padding: 50px 0;
+  position: relative;
+  text-align: center;
+}
+#depoimentos:before {
+  content: "";
+  background: rgba(4, 4, 63, 0.82);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 #destaques {
   height: 9.625em;
@@ -7656,6 +7673,9 @@ footer a {
   -webkit-box-pack: end;
   -ms-flex-pack: end;
   justify-content: flex-end;
+}
+footer a:hover {
+  color: #ffcb17;
 }
 #escritorio {
   margin-top: 109px;
