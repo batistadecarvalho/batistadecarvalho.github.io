@@ -31,6 +31,14 @@
     transition: .3s ease-in-out all;
   }
 
+.centraliza {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@borda: 3px ridge darken(@brand-warning, 7%);
+
 // degrades
 .degrade-cinza {    
     background: #f3f4f2; /* Old browsers */
@@ -96,10 +104,11 @@
 //
 //## Font, line-height, and color for body text, headings, and more.
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap');
 
 @font-family-sans-serif:  'Poppins', sans-serif;
-@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-serif:       'Libre Caslon Text', serif;
+// @font-family-serif:       Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 @font-family-base:        @font-family-sans-serif;

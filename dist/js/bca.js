@@ -36,7 +36,7 @@ document.getElementById("menu").innerHTML = `
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li id="actIni"><a href="/" id="inicio"></a></li>
-          <li id="actSob"><a href="/sobre/" id="sobre"></a></li>
+          <li id="actSob"><a href="/o-escritorio/" id="sobre"></a></li>
           <li class="dropdown" id="actAtu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="atuacao"></a>
             <ul class="dropdown-menu" id="areas-atuacao">            
@@ -70,7 +70,7 @@ var btContato = document.getElementById("contato");
 
 btInicio.innerHTML = 'Início';
 btAtuacao.innerHTML = 'Áreas de Atuação <span class="caret"></span>';
-btSobre.innerHTML = 'Sobre';
+btSobre.innerHTML = 'o escritório';
 btCases.innerHTML = 'Cases de Sucesso';
 btNoticias.innerHTML = 'Notícias';
 btContato.innerHTML = 'Contato';

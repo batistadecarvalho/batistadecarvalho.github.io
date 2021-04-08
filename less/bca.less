@@ -17,7 +17,7 @@ a, button {
     .dropdown-menu {
         width: 600px;
         height: auto;
-        padding: 12px 0;
+        padding: 16px 0;
         left:0;
         &::before {
             content: "";
@@ -36,16 +36,26 @@ a, button {
                 display:unset;
                 text-transform: uppercase;
                 font-weight: 600;
-                text-decoration: underline;                
+                background: @brand-warning;
+                color: @azul;
+                padding: 2.5px 5px;                
+                margin-left: 15px;
+                top:-4px;
             }
         }
-        li:nth-child(n+5) {            
+        li:nth-child(5) {            
+            right: -300px;
+            top: -102px;
+        }
+        li:nth-child(n+6) {            
             right: -300px;
             top: -98px;
         }
         > li > a:hover {
-            background-color: @brand-warning;
+            background-color: transparent;
             color: @azul;
+            text-decoration: underline;
+
         }
     }    
 }
@@ -82,7 +92,7 @@ a, button {
         }
     }
 }   
-.carousel-inner {
+#myCarousel .carousel-inner {
     border-bottom: 3px ridge @navbar-default-border;
     .item:nth-child(1) {
         background: url('@{img}/lawyer.jpeg') center/cover no-repeat;
@@ -94,6 +104,15 @@ a, button {
         background: url('@{img}/business.jpeg') center/cover no-repeat;
     }
 }
+#depoimentos {
+    // background-color: darken(@gray-lighter, 7%);
+    background: url('@{img}/bg-depoimento.png') repeat;
+    .centraliza();
+    height: 300px;
+    border-top: @borda;
+    border-bottom: @borda;
+}
+
 /////////////////////////////////////////////////////////
 // SECTIONS // /////////////////////////////////////////
 ///////////////////////////////////////////////////////
@@ -138,10 +157,10 @@ a, button {
     }
 }
 #marketing {
-    margin-top: 50px;    
+    margin: @ggg auto;    
 }
 #motivos {
-    margin-top: 50px;
+    margin: @ggg auto;
     hr {
         border-bottom: 2px ridge @brand-warning;
     }
@@ -176,28 +195,93 @@ a {
         justify-content: flex-end;     
   }
 }
+///////////
+// Internas
+///////////
+#escritorio {
+    // position: relative;
+    margin-top: 109px;
+    height: 200px;
+    width: 100vw;
+    
+    border-bottom: @borda;
+    background: url('@{img}/escritorio.jpeg') center/cover no-repeat;
+    .centraliza;
+    h1 {
+        color: @white;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+#timeline {
+    // background: @gray-light;
+    height: 350px;
+    border-top: @borda;
+    padding:@ggg 0;
+    background: url('@{img}/bg-depoimento.png') repeat;
+    .marco{ 
+        .centraliza();
+        p{
+            margin-bottom: 0;
+            font-family: @font-family-serif;
+            font-weight: 400;
+        }
+    }
+}
 // hexagono
 .hexagon {
+    cursor: pointer;
     position: relative;
-    width: 200px;
-    height: 120px;
-    background: @azul;
-    margin: 144px auto;
+    width: 50px;
+    height: 30px;
+    background: darken(@brand-warning,7%);
+    // margin: 77px auto;
+    .centraliza;
+    z-index: 20;
     &::before, &::after {
         content: "";
         position: absolute;
         left:0;
-        border-left: 100px solid transparent;
-        border-right: 100px solid transparent;              
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;              
     }
     &::before {
         bottom: 100%;
-        border-bottom: 50px solid @azul;
+        border-bottom: 12.5px solid darken(@brand-warning,7%);
       }
     &::after {
         top: 100%;
-        border-top: 50px solid @azul;
-      }  
+        border-top: 12.5px solid darken(@brand-warning,7%);
+      }        
+    .hexagon-centro {
+    z-index: 21;
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    background: @azul;
+    // margin: 77px auto;
+    .centraliza;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        left:0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;              
+    }
+    &::before {
+        bottom: 100%;
+        border-bottom: 10px solid @azul;
+        }
+    &::after {
+        top: 100%;
+        border-top: 10px solid @azul;
+        } 
+        h2{
+            margin:0;
+            color: @brand-warning;
+            font-size: @pq;
+        }           
+    }
   }
 
 
