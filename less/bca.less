@@ -262,15 +262,23 @@ a {
         }
     }
     #contatos {        
-        h3 {   
+        h3 { 
             &:hover {
-                animation: tremidaBt .3s ease-in-out 0s 1 normal;
-              }           
-            a {                
+                // animation: tremidaBt .3s ease-in-out 0s 1 normal;
+            }           
+            a { 
+                .btn();
+                .btn-lg();
+                .bt-verde();
+
                 i{
                     font-size: @gd;
                 }
             }
+        }
+        h4 {
+            font-family: @font-family-serif;
+            color: @azul;
         }
     }
 }

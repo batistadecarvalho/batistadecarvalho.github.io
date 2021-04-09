@@ -21,12 +21,12 @@ document.getElementById("social-bar").innerHTML = `
 </a>
 </div>
 <div class="social-icon" title="Chame-nos no WhatsApp">
-<a href="https://wa.link/ovv4nw" target="_blank">
+<a href="https://wa.link/ue34s6" target="_blank">
   <i class="fab fa-whatsapp"></i>
 </a>
 </div>
-<div class="social-icon telefone" title="Vamos bater um papo? (11) 985.775.279">        
-  <i>(11) 985.775.279</i>        
+<div class="social-icon telefone" title="Vamos bater um papo? (11) 3832.6612">        
+  <i>(11) 3832.6612</i>        
 </div>
 `
 // navbar
