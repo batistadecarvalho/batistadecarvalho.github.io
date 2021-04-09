@@ -15,7 +15,7 @@ a, button {
         align-items: center;
     }
     .dropdown-menu {
-        width: 600px;
+        width: 420px;
         height: auto;
         padding: 16px 0;
         left:0;
@@ -44,11 +44,11 @@ a, button {
             }
         }
         li:nth-child(5) {            
-            right: -300px;
+            right: -200px;
             top: -102px;
         }
         li:nth-child(n+6) {            
-            right: -300px;
+            right: -200px;
             top: -98px;
         }
         > li > a:hover {
@@ -118,6 +118,7 @@ a, button {
     padding: 50px 0;
     position: relative;
     text-align: center;
+    
     &:before {
         content: "";
         background: rgba(4, 4, 63, 0.82);
@@ -126,6 +127,14 @@ a, button {
         left: 0;
         width: 100%;
         height: 100%;
+    }
+    .texto {
+        color: @brand-warning;
+        z-index: 30;
+        p{
+            width: 50ch;
+            text-align: center;
+        }
     }
 }
 
@@ -189,15 +198,17 @@ a, button {
 
 }
 footer {
-//  .degrade-azul;
-background-color: @brand-primary;
+// background-color: @brand-primary;
+background:url('@{img}/bg-pt-azul.png') ;
  height: 75px;
  display: flex;
  justify-content: space-between;
 align-items: center;
 color: @white;
-p {
-    
+position: static;
+width: 100vw;
+bottom:0;
+p {    
     flex-direction: col;
         flex: 1 1 50%;
         text-align: left;        
@@ -211,25 +222,56 @@ a {
     justify-content: flex-end;     
     &:hover {
         color: @brand-warning;
+        animation: cresceBt .3s ease-in-out 0s 1 normal;        
     }
   }
 }
 ///////////
 // Internas
 ///////////
-#escritorio {
-    // position: relative;
+#escritorio, #pag-contato, #artigos {    
     margin-top: 109px;
     height: 200px;
-    width: 100vw;
-    
-    border-bottom: @borda;
-    background: url('@{img}/escritorio.jpeg') center/cover no-repeat;
+    width: 100vw;    
+    border-bottom: @borda;    
     .centraliza;
     h1 {
         color: @white;
         text-transform: uppercase;
         font-weight: 700;
+    }
+}
+#escritorio {
+    background: url('@{img}/escritorio.jpeg') center/cover no-repeat;
+}
+#pag-contato {
+    background: url('@{img}/telefone.jpg') right/cover no-repeat;
+}
+#artigos {
+    background: url('@{img}/artigos.jpg') right/cover no-repeat;
+}
+#formulario-contato {
+    margin: @ggg auto;    
+    form {        
+        .form-group{
+            label {
+                color:@azul;
+                // font-weight: 400;
+                font-family: @font-family-serif;
+            }
+        }
+    }
+    #contatos {        
+        h3 {   
+            &:hover {
+                animation: tremidaBt .3s ease-in-out 0s 1 normal;
+              }           
+            a {                
+                i{
+                    font-size: @gd;
+                }
+            }
+        }
     }
 }
 #timeline {
@@ -302,6 +344,8 @@ a {
         }           
     }
   }
+
+
 
 
 //ScrollBar 

@@ -2881,8 +2881,8 @@ output {
   color: #666666;
   background-color: #fff;
   background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: 1px solid #040431;
+  border-radius: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -2893,10 +2893,10 @@ output {
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
 }
 .form-control:focus {
-  border-color: #66afe9;
+  border-color: #ffcb17;
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 203, 23, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(255, 203, 23, 0.6);
 }
 .form-control::-moz-placeholder {
   color: #999;
@@ -4090,6 +4090,50 @@ tbody.collapse.in {
   100% {
     width: 100%;
     height: auto;
+  }
+}
+@-webkit-keyframes cresceBt {
+  0% {
+    font-size: 0.875em;
+    margin-top: 0;
+  }
+  25% {
+    font-size: 1.0625em;
+    margin-top: -1px;
+  }
+  50% {
+    font-size: 1.3125em;
+    margin-top: -2px;
+  }
+  75% {
+    font-size: 1.0625em;
+    margin-top: -1px;
+  }
+  100% {
+    font-size: 0.875em;
+    margin-top: 0;
+  }
+}
+@keyframes cresceBt {
+  0% {
+    font-size: 0.875em;
+    margin-top: 0;
+  }
+  25% {
+    font-size: 1.0625em;
+    margin-top: -1px;
+  }
+  50% {
+    font-size: 1.3125em;
+    margin-top: -2px;
+  }
+  75% {
+    font-size: 1.0625em;
+    margin-top: -1px;
+  }
+  100% {
+    font-size: 0.875em;
+    margin-top: 0;
   }
 }
 .caret {
@@ -7428,7 +7472,7 @@ button {
   align-items: center;
 }
 .navbar-wrapper .navbar .dropdown-menu {
-  width: 600px;
+  width: 420px;
   height: auto;
   padding: 16px 0;
   left: 0;
@@ -7459,11 +7503,11 @@ button {
   top: -4px;
 }
 .navbar-wrapper .navbar .dropdown-menu li:nth-child(5) {
-  right: -300px;
+  right: -200px;
   top: -102px;
 }
 .navbar-wrapper .navbar .dropdown-menu li:nth-child(n+6) {
-  right: -300px;
+  right: -200px;
   top: -98px;
 }
 .navbar-wrapper .navbar .dropdown-menu > li > a:hover {
@@ -7556,6 +7600,14 @@ button {
   width: 100%;
   height: 100%;
 }
+#depoimentos .texto {
+  color: #ffcb17;
+  z-index: 30;
+}
+#depoimentos .texto p {
+  width: 50ch;
+  text-align: center;
+}
 #destaques {
   height: 9.625em;
   position: relative;
@@ -7634,7 +7686,7 @@ button {
   color: #070752;
 }
 footer {
-  background-color: #040431;
+  background: url('../img/bg-pt-azul.png');
   height: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7646,6 +7698,9 @@ footer {
   -ms-flex-align: center;
   align-items: center;
   color: white;
+  position: static;
+  width: 100vw;
+  bottom: 0;
 }
 footer p {
   -webkit-box-orient: vertical;
@@ -7676,13 +7731,16 @@ footer a {
 }
 footer a:hover {
   color: #ffcb17;
+  -webkit-animation: cresceBt 0.3s ease-in-out 0s 1 normal;
+  animation: cresceBt 0.3s ease-in-out 0s 1 normal;
 }
-#escritorio {
+#escritorio,
+#pag-contato,
+#artigos {
   margin-top: 109px;
   height: 200px;
   width: 100vw;
   border-bottom: 3px ridge #f2bc00;
-  background: url('../img/escritorio.jpeg') center / cover no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7693,10 +7751,35 @@ footer a:hover {
   -ms-flex-align: center;
   align-items: center;
 }
-#escritorio h1 {
+#escritorio h1,
+#pag-contato h1,
+#artigos h1 {
   color: white;
   text-transform: uppercase;
   font-weight: 700;
+}
+#escritorio {
+  background: url('../img/escritorio.jpeg') center / cover no-repeat;
+}
+#pag-contato {
+  background: url('../img/telefone.jpg') right / cover no-repeat;
+}
+#artigos {
+  background: url('../img/artigos.jpg') right / cover no-repeat;
+}
+#formulario-contato {
+  margin: 3.625em auto;
+}
+#formulario-contato form .form-group label {
+  color: #070752;
+  font-family: 'Libre Caslon Text', serif;
+}
+#formulario-contato #contatos h3:hover {
+  -webkit-animation: tremidaBt 0.3s ease-in-out 0s 1 normal;
+  animation: tremidaBt 0.3s ease-in-out 0s 1 normal;
+}
+#formulario-contato #contatos h3 a i {
+  font-size: 1.3125em;
 }
 #timeline {
   height: 350px;

@@ -17,7 +17,12 @@ document.getElementById("social-bar").innerHTML = `
 </div>
 <div class="social-icon" title="Envie um E-mail">
 <a href="mailto:levibatistadecarvalho@gmail.com?subject=Contato via site Batista de Carvalho&body=Inclua aqui seus questionamentos e dúvidas&bcc=levi.carvalho1@gmail.com" target="_blank">
-  <i class="fas fa-envelope-open-text"></i>
+  <i class="fas fa-envelope"></i>
+</a>
+</div>
+<div class="social-icon" title="Chame-nos no WhatsApp">
+<a href="https://wa.link/ovv4nw" target="_blank">
+  <i class="fab fa-whatsapp"></i>
 </a>
 </div>
 <div class="social-icon telefone" title="Vamos bater um papo? (11) 985.775.279">        
@@ -54,41 +59,36 @@ document.getElementById("menu").innerHTML = `
               <li><a href="#">Separated link</a></li>
               <li><a href="#">One more separated link</a></li>            
             </ul>
-          </li>
-          <li  id="actCas"><a href="#" id="cases"></a></li>
-          <li  id="actNot"><a href="#" id="noticias"></a></li>
-          <li  id="actCon"><a href="#" id="contato"></a></li>
+          </li>          
+          <li  id="actNot"><a href="/artigos/" id="noticias"></a></li>
+          <li  id="actCon"><a href="/contato/" id="contato"></a></li>
         </ul>
       </div>
     </div>
   </nav>
 
 </div>
-
 `;
 var btInicio = document.getElementById("inicio");
 var btAtuacao = document.getElementById("atuacao");
 var btSobre = document.getElementById("sobre");
-var btCases = document.getElementById("cases");
 var btNoticias = document.getElementById("noticias");
 var btContato = document.getElementById("contato");
 
 btInicio.innerHTML = 'Início';
 btAtuacao.innerHTML = 'Áreas de Atuação <span class="caret"></span>';
 btSobre.innerHTML = 'o escritório';
-btCases.innerHTML = 'Cases de Sucesso';
-btNoticias.innerHTML = 'Notícias';
+btNoticias.innerHTML = 'artigos';
 btContato.innerHTML = 'Contato';
 
 var actInicio = document.getElementById("actIni");
 var actAtuacao = document.getElementById("actAtu");
 var actSobre = document.getElementById("actSob");
-var actCases = document.getElementById("actCas");
 var actNoticias = document.getElementById("actNot");
 var actContato = document.getElementById("actCon");
 
-var activeBts = [actInicio, actSobre, actAtuacao, actCases,actNoticias, actContato];
-activeBts[0,1,2,3,4,5].addEventListener("click", function() {
+var activeBts = [actInicio, actSobre, actAtuacao,actNoticias, actContato];
+activeBts[0,1,2,3,4].addEventListener("click", function() {
   activeBts[i].classList.remove('active');
   // i.classList.add('active');
 });
