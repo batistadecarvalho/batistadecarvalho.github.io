@@ -5,11 +5,11 @@ document.getElementById("social-bar").innerHTML = `
   <i class="fab fa-instagram"></i>          
 </a>
 </div>
-<div class="social-icon" title="Curta no Facebook">
+<!--div class="social-icon" title="Curta no Facebook">
 <a>
   <i class="fab fa-facebook"></i>
 </a>
-</div>
+</div-->
 <div class="social-icon" title="Siga-nos no Linkedin">
 <a href="https://www.linkedin.com/in/levi-carvalho-7171b225/" target="_blank">
 <i class="fab fa-linkedin"></i>

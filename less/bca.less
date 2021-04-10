@@ -68,7 +68,7 @@ a, button {
 }
 
 #social-bar {
-    background: @brand-primary;
+    background: @darken-primary;
     height: 29px;
     display: flex;
     justify-content: flex-end;
@@ -76,11 +76,12 @@ a, button {
     z-index: @zindex-navbar;
     width: 100%;
     .social-icon {
-        margin: 0 4px;
+        margin: 0 7px;
         display: flex;
         align-items: center;
         justify-content: center;
         a {
+            font-size: @md; 
             color: @white;
             &:hover {
                 color: @brand-info;
@@ -97,6 +98,9 @@ a, button {
     border-bottom: 3px ridge @navbar-default-border;
     .item:nth-child(1) {
         background: url('@{img}/lawyer.jpeg') center/cover no-repeat;
+        h1 {
+            width: 20ch;
+        }
     }
     .item:nth-child(2) {
         background: url('@{img}/escritorio.jpeg') center/cover no-repeat;
@@ -129,6 +133,9 @@ a, button {
         height: 100%;
     }
     .texto {
+        h2 {
+            font-family: @font-family-serif;
+        }
         color: @brand-warning;
         z-index: 30;
         p{
@@ -148,7 +155,7 @@ a, button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: @brand-primary;            
+    background: darken(@brand-primary, 7%);            
     .col {
         .anima();
         flex-direction: col;
@@ -182,21 +189,146 @@ a, button {
     }
 }
 #marketing {
-    margin: @ggg auto;    
+    margin: @gd auto;  
+    .titulo {
+        margin: @ggg auto;  
+        // text-align: center;
+        h2 {            
+            color: @azul;
+            font-weight: 700;
+        }        
+    }
+    .marketing {
+        margin: @ggg auto;  
+        .col-lg-4 {
+            margin-bottom: 20px;
+            text-align: left;
+            border-right: 1px solid @brand-warning;
+            padding: 0 @ggg;  
+            img {
+                width: 100%;
+                height: @xggg;
+            }          
+            h2 {
+                font-weight: 300;
+                text-transform: unset;
+                font-size: @gg;
+                color: @brand-primary;
+            }
+            p{
+                font-family: @font-family-serif;   
+                margin: 15px 0;         
+            }
+            a {
+                .btn();
+                .bt-primario();
+            }
+          }
+    }
 }
-#motivos {
+#motivos, #motivos2{
     margin: @ggg auto;
     hr {
         border-bottom: 2px ridge @brand-warning;
     }
     h2 {
-        color: @azul;
+        color: @azul;        
+    }
+    p.lead {
+        font-family: @font-family-serif;
+    }
+}
+#motivos2 {
+    background:url('@{img}/bg-pattern-amarelo.png') ;
+    .featurette-heading {                
+        color: @brand-primary;
         .text-muted {
-            // color: @brand-info;
+            color: @azul;
+        }
+    }    
+}
+#passos {
+    margin: @ggg auto;
+    .texto {
+        h2 {
+            // font-family: @font-family-serif;
+            font-weight: 700;
+            color: @azul;
+        }
+        p {}
+    }
+    .passos {
+        border-top: 2px solid @gray-lighter;
+        position: relative;
+        display: inline-block;
+        margin-top: 40px;
+        text-align: center;
+        .etapa {
+            border: 2px ridge @brand-primary;
+            float: left;
+            margin: 25px 10px 10px;
+            padding: 10px 5px 15px;
+            position: relative;
+            width: 23.4%;
+            &:first-child {
+                margin-left: 0;
+            }
+            &::before {
+                border-right: 2px solid @azul;
+                content: "";
+                height: 30px;
+                left: 0;
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                text-align: center;
+                top: -30px;
+                width: 2px;
+            }
+            &::after {
+                background: @brand-warning none repeat scroll 0 0;                
+                border: 2px ridge @brand-primary;
+                outline: 3px solid @white;
+                content: "";
+                height: 15px;
+                left: 0;
+                margin: 0 auto;
+                position: absolute;
+                right: 0;
+                top: -35px;
+                width: 15px;
+                transform: rotate(45deg);
+            }
+            .nome-etapa {
+                color: @brand-primary;
+                font-size: 15px;
+                font-weight: 600;
+                margin: 10px 0 15px;
+                text-transform: uppercase;
+            }
+            .texto-etapa {
+                color: @gray;
+                font-size: @pq;
+                line-height: 20px;
+                margin-bottom: 15px;
+                font-family: @font-family-serif;
+            }
+            .bt-etapa {
+                a{
+                    .btn-sm();
+                    .btn();
+                    .bt-primario-inv();
+                }
+            }
         }
     }
-
 }
+
+/////////////
+// FOOTER
+////////////
+
+
 footer {
 // background-color: @brand-primary;
 background:url('@{img}/bg-pt-azul.png') ;

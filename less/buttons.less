@@ -192,6 +192,12 @@ input[type="button"] {
     .bt-ghost(@brand-primary, 2px solid @brand-primary, @white);   
   }
 }
+.bt-primario-inv {
+  .bt-ghost(@brand-primary, 2px solid @brand-primary, @white);   
+  &:hover, &:focus {
+    .bt-ghost(@azul, 2px solid @azul, @brand-warning);
+  }
+}
 .bt-sucesso {
   .bt-ghost(transparent, 2px solid @brand-success, @brand-success);
   &:hover, &:focus {
