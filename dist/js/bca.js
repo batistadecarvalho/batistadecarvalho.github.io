@@ -1,3 +1,10 @@
+// var script = document.createElement('script'); 
+          
+// script.src =  "https://kit.fontawesome.com/965146de71.js"; 
+  
+// document.head.appendChild(script) 
+
+
 // social bar
 document.getElementById("social-bar").innerHTML = `
 <div class="social-icon" title="Siga-nos no Instagram">
@@ -45,13 +52,13 @@ document.getElementById("menu").innerHTML = `
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li id="actIni"><a href="/" id="inicio"></a></li>
-          <li id="actSob"><a href="/o-escritorio/" id="sobre"></a></li>
+          <li id="actIni"><a href="/" id="inicio">Início</a></li>
+          <li id="actSob"><a href="/o-escritorio/" id="sobre">O Escritório</a></li>
           <li class="dropdown" id="actAtu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="atuacao"></a>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="atuacao">Áreas de Atuação <span class="caret"></span></a>
             <ul class="dropdown-menu" id="areas-atuacao">            
               <li class="dropdown-header">Pessoa Jurídica</li>
-                <li><a href="#">Action</a></li>
+                <li><a href="/areas-de-atuacao/direito-do-consumidor/">Direito do Consumidor</a></li>
                 <li><a href="#">Another action</a></li>
                 <li><a href="#">Something else here</a></li>            
               <!--li role="separator" class="divider"></li-->
@@ -60,8 +67,8 @@ document.getElementById("menu").innerHTML = `
               <li><a href="#">One more separated link</a></li>            
             </ul>
           </li>          
-          <li  id="actNot"><a href="/artigos/" id="noticias"></a></li>
-          <li  id="actCon"><a href="/contato/" id="contato"></a></li>
+          <li  id="actNot"><a href="/artigos/" id="noticias">Artigos</a></li>
+          <li  id="actCon"><a href="/contato/" id="contato">Contato</a></li>
         </ul>
       </div>
     </div>
@@ -69,18 +76,6 @@ document.getElementById("menu").innerHTML = `
 
 </div>
 `;
-var btInicio = document.getElementById("inicio");
-var btAtuacao = document.getElementById("atuacao");
-var btSobre = document.getElementById("sobre");
-var btNoticias = document.getElementById("noticias");
-var btContato = document.getElementById("contato");
-
-btInicio.innerHTML = 'Início';
-btAtuacao.innerHTML = 'Áreas de Atuação <span class="caret"></span>';
-btSobre.innerHTML = 'o escritório';
-btNoticias.innerHTML = 'artigos';
-btContato.innerHTML = 'Contato';
-
 var actInicio = document.getElementById("actIni");
 var actAtuacao = document.getElementById("actAtu");
 var actSobre = document.getElementById("actSob");
@@ -139,3 +134,47 @@ document.getElementById('rodape').innerHTML = `
 <a href="#topo"><i class="fa fa-chevron-up"></i></a>
 
 `
+/////////////
+// Artigos
+/////////////
+////
+
+// INVENTARIO 1
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+// TITULO
+var titArtInventario1 = document.getElementById('titArt-inventario1');
+var titDestaq1 = titArtInventario1.innerHTML = '5 passos para fazer um inventário';
+// IMAGEM
+var imgArtInventario1 = document.getElementById('imgArtInventario1');
+var imgDestaq1 = imgArtInventario1.setAttribute('src', '/dist/img/escritorio.jpeg');
+
+// TEXTO
+var txtArtInventario1 = document.getElementById('txtArtInventario1');
+var txtDestaq1 = txtArtInventario1.innerHTML = `
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+Repellendus accusamus ea ad beatae id magnam, sunt praesentium 
+sint rem perferendis! Numquam earum error perspiciatis ipsum 
+aliquid neque pariatur minus consequatur quaerat corrupti. 
+Provident iure animi, necessitatibus odio dolorum recusandae 
+corrupti quidem aliquid itaque ullam error exercitationem 
+voluptatibus dolores nulla, quae voluptas. Dolorum molestiae 
+exercitationem mollitia enim ratione nemo dolores quasi voluptas 
+esse id! Possimus, quis excepturi earum tenetur delectus deserunt 
+debitis ab, consectetur consequatur sapiente natus tempore minus perspiciatis 
+libero enim officiis optio atque! Reiciendis, ex modi omnis minus
+est eaque rerum earum vitae molestiae? Ullam veritatis sit et 
+repellat nesciunt veniam incidunt quo sed inventore distinctio 
+vitae unde harum maxime earum hic sequi cupiditate odit, nostrum 
+perferendis. Obcaecati, veniam.</p>
+`;
+
+var titD2 = document.getElementById('titDestaque2');
+var imgD2 = document.getElementById('imgDestaque2');
+var txtD2 = document.getElementById('txtDestaque2');
+function destaque2(titulo2, imagem2, texto2) {  
+  titD2.innerHTML = titulo2;
+  imgD2 = imagem2;
+  txtD2.innerHTML = texto2;
+}
+
+destaque2(titDestaq1, imgDestaq1, txtDestaq1);

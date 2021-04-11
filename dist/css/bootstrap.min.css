@@ -7669,13 +7669,11 @@ button {
   height: 100%;
 }
 #depoimentos .texto {
-  color: #ffcc17;
+  color: white;
   z-index: 30;
 }
-#depoimentos .texto h2 {
-  font-family: 'Libre Caslon Text', serif;
-}
 #depoimentos .texto p {
+  font-family: 'Libre Caslon Text', serif;
   width: 50ch;
   text-align: center;
 }
@@ -7744,40 +7742,55 @@ button {
 #destaques .col:hover h4 {
   letter-spacing: 0.05em;
 }
-#marketing {
+#artigos {
   margin: 1.3125em auto;
 }
-#marketing .titulo {
+#artigos .titulo {
   margin: 3.625em auto;
 }
-#marketing .titulo h2 {
+#artigos .titulo h2 {
   color: #00008a;
   font-weight: 700;
 }
-#marketing .marketing {
+#artigos .artigos {
   margin: 3.625em auto;
 }
-#marketing .marketing .col-lg-4 {
+#artigos .artigos .col-lg-4 {
   margin-bottom: 20px;
   text-align: left;
   border-right: 1px solid #ffcc17;
   padding: 0 3.625em;
 }
-#marketing .marketing .col-lg-4 img {
+#artigos .artigos .col-lg-4 img {
   width: 100%;
   height: 9.625em;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
-#marketing .marketing .col-lg-4 h2 {
+#artigos .artigos .col-lg-4 h2 {
   font-weight: 300;
   text-transform: unset;
   font-size: 1.8125em;
   color: #070752;
 }
-#marketing .marketing .col-lg-4 p {
+#artigos .artigos .col-lg-4 .p {
   font-family: 'Libre Caslon Text', serif;
-  margin: 15px 0;
+  margin: 1.0625em 0;
+  width: 100%;
+  height: 120px;
+  white-space: wrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
 }
-#marketing .marketing .col-lg-4 a {
+#artigos .artigos .col-lg-4 .p::after {
+  content: '...';
+  position: relative;
+  top: -388px;
+  right: -276px;
+  color: #00008a;
+}
+#artigos .artigos .col-lg-4 a {
   display: inline-block;
   margin-bottom: 0;
   font-weight: normal;
@@ -7806,48 +7819,49 @@ button {
   -webkit-transition: all ease-in-out 0.3s;
   -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
+  margin-top: 5px;
 }
-#marketing .marketing .col-lg-4 a:focus,
-#marketing .marketing .col-lg-4 a:active:focus,
-#marketing .marketing .col-lg-4 a.active:focus,
-#marketing .marketing .col-lg-4 a.focus,
-#marketing .marketing .col-lg-4 a:active.focus,
-#marketing .marketing .col-lg-4 a.active.focus {
+#artigos .artigos .col-lg-4 a:focus,
+#artigos .artigos .col-lg-4 a:active:focus,
+#artigos .artigos .col-lg-4 a.active:focus,
+#artigos .artigos .col-lg-4 a.focus,
+#artigos .artigos .col-lg-4 a:active.focus,
+#artigos .artigos .col-lg-4 a.active.focus {
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
-#marketing .marketing .col-lg-4 a:hover,
-#marketing .marketing .col-lg-4 a:focus,
-#marketing .marketing .col-lg-4 a.focus {
+#artigos .artigos .col-lg-4 a:hover,
+#artigos .artigos .col-lg-4 a:focus,
+#artigos .artigos .col-lg-4 a.focus {
   color: #333;
   text-decoration: none;
 }
-#marketing .marketing .col-lg-4 a:active,
-#marketing .marketing .col-lg-4 a.active {
+#artigos .artigos .col-lg-4 a:active,
+#artigos .artigos .col-lg-4 a.active {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
-#marketing .marketing .col-lg-4 a.disabled,
-#marketing .marketing .col-lg-4 a[disabled],
-fieldset[disabled] #marketing .marketing .col-lg-4 a {
+#artigos .artigos .col-lg-4 a.disabled,
+#artigos .artigos .col-lg-4 a[disabled],
+fieldset[disabled] #artigos .artigos .col-lg-4 a {
   cursor: not-allowed;
   filter: alpha(opacity=65);
   opacity: 0.65;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
-a#marketing .marketing .col-lg-4 a.disabled,
-fieldset[disabled] a#marketing .marketing .col-lg-4 a {
+a#artigos .artigos .col-lg-4 a.disabled,
+fieldset[disabled] a#artigos .artigos .col-lg-4 a {
   pointer-events: none;
 }
-#marketing .marketing .col-lg-4 a:hover {
+#artigos .artigos .col-lg-4 a:hover {
   -webkit-animation: tremidaBt 0.3s ease-in-out 0s 1 normal;
   animation: tremidaBt 0.3s ease-in-out 0s 1 normal;
 }
-#marketing .marketing .col-lg-4 a:hover,
-#marketing .marketing .col-lg-4 a:focus {
+#artigos .artigos .col-lg-4 a:hover,
+#artigos .artigos .col-lg-4 a:focus {
   background: #070752;
   border: 2px solid #070752;
   border-radius: 0px;
@@ -7858,8 +7872,8 @@ fieldset[disabled] a#marketing .marketing .col-lg-4 a {
   -o-transition: all ease-in-out 0.3s;
   transition: all ease-in-out 0.3s;
 }
-#marketing .marketing .col-lg-4 a:hover:hover,
-#marketing .marketing .col-lg-4 a:focus:hover {
+#artigos .artigos .col-lg-4 a:hover:hover,
+#artigos .artigos .col-lg-4 a:focus:hover {
   -webkit-animation: tremidaBt 0.3s ease-in-out 0s 1 normal;
   animation: tremidaBt 0.3s ease-in-out 0s 1 normal;
 }
@@ -7890,6 +7904,7 @@ fieldset[disabled] a#marketing .marketing .col-lg-4 a {
 }
 #passos {
   margin: 3.625em auto;
+  background: white;
 }
 #passos .texto h2 {
   font-weight: 700;
@@ -7914,7 +7929,7 @@ fieldset[disabled] a#marketing .marketing .col-lg-4 a {
   margin-left: 0;
 }
 #passos .passos .etapa::before {
-  border-right: 2px solid #00008a;
+  border-right: 2px solid #e6e6e6;
   content: "";
   height: 30px;
   left: 0;
@@ -8096,7 +8111,9 @@ footer a:hover {
 }
 #escritorio,
 #pag-contato,
-#artigos {
+#artigos-header,
+#consumidor-header,
+#headerArtInventario1 {
   margin-top: 109px;
   height: 200px;
   width: 100vw;
@@ -8113,7 +8130,9 @@ footer a:hover {
 }
 #escritorio h1,
 #pag-contato h1,
-#artigos h1 {
+#artigos-header h1,
+#consumidor-header h1,
+#headerArtInventario1 h1 {
   color: white;
   text-transform: uppercase;
   font-weight: 700;
@@ -8124,8 +8143,14 @@ footer a:hover {
 #pag-contato {
   background: url('../img/telefone.jpg') right / cover no-repeat;
 }
-#artigos {
+#artigos-header {
   background: url('../img/artigos.jpg') right / cover no-repeat;
+}
+#consumidor-header {
+  background: url('../img/artigos.jpg') right / cover no-repeat;
+}
+#headerArtInventario1 {
+  background: url('/dist/img/escritorio.jpeg') center / cover no-repeat;
 }
 #formulario-contato {
   margin: 3.625em auto;
@@ -8322,6 +8347,13 @@ fieldset[disabled] a#formulario-contato #contatos h3 a {
   margin: 0;
   color: #ffcc17;
   font-size: 0.875em;
+}
+#consumidor,
+#artigo {
+  margin: 3.625em auto;
+}
+#artigo {
+  font-family: 'Libre Caslon Text', serif;
 }
 /* width */
 ::-webkit-scrollbar {

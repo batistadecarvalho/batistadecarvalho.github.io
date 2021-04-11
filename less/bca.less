@@ -1,6 +1,7 @@
 html, body {
     overflow-x:hidden;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
+       
 }
 a, button {
     cursor: pointer;
@@ -134,11 +135,11 @@ a, button {
     }
     .texto {
         h2 {
-            font-family: @font-family-serif;
         }
-        color: @brand-warning;
+        color: @white;
         z-index: 30;
         p{
+            font-family: @font-family-serif;
             width: 50ch;
             text-align: center;
         }
@@ -188,7 +189,7 @@ a, button {
         }
     }
 }
-#marketing {
+#artigos {
     margin: @gd auto;  
     .titulo {
         margin: @ggg auto;  
@@ -198,7 +199,7 @@ a, button {
             font-weight: 700;
         }        
     }
-    .marketing {
+    .artigos {
         margin: @ggg auto;  
         .col-lg-4 {
             margin-bottom: 20px;
@@ -207,7 +208,8 @@ a, button {
             padding: 0 @ggg;  
             img {
                 width: 100%;
-                height: @xggg;
+                height: @xggg;  
+                object-fit: cover; // deixa img mask no container                
             }          
             h2 {
                 font-weight: 300;
@@ -215,13 +217,27 @@ a, button {
                 font-size: @gg;
                 color: @brand-primary;
             }
-            p{
+            .p{
                 font-family: @font-family-serif;   
-                margin: 15px 0;         
+                margin: @md 0;   
+                width: 100%;                     
+                height: 120px;                     
+                white-space: wrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &::after {
+                    // content: '<i class="fas fa-ellipsis-h"></i>';
+                    content: '...';
+                    position: relative;
+                    top: -388px;
+                    right: -276px;
+                    color: #00008a;
+                }
             }
             a {
                 .btn();
                 .bt-primario();
+                margin-top:5px;
             }
           }
     }
@@ -238,6 +254,9 @@ a, button {
         font-family: @font-family-serif;
     }
 }
+#motivos {
+    
+}
 #motivos2 {
     background:url('@{img}/bg-pattern-amarelo.png') ;
     .featurette-heading {                
@@ -249,13 +268,13 @@ a, button {
 }
 #passos {
     margin: @ggg auto;
+    background: @white;
     .texto {
         h2 {
             // font-family: @font-family-serif;
             font-weight: 700;
             color: @azul;
-        }
-        p {}
+        }    
     }
     .passos {
         border-top: 2px solid @gray-lighter;
@@ -274,7 +293,7 @@ a, button {
                 margin-left: 0;
             }
             &::before {
-                border-right: 2px solid @azul;
+                border-right: 2px solid @gray-lighter;
                 content: "";
                 height: 30px;
                 left: 0;
@@ -361,7 +380,7 @@ a {
 ///////////
 // Internas
 ///////////
-#escritorio, #pag-contato, #artigos {    
+#escritorio, #pag-contato, #artigos-header, #consumidor-header, #headerArtInventario1 {    
     margin-top: 109px;
     height: 200px;
     width: 100vw;    
@@ -379,8 +398,15 @@ a {
 #pag-contato {
     background: url('@{img}/telefone.jpg') right/cover no-repeat;
 }
-#artigos {
+#artigos-header {
     background: url('@{img}/artigos.jpg') right/cover no-repeat;
+}
+#consumidor-header {
+    background: url('@{img}/artigos.jpg') right/cover no-repeat;
+}
+#headerArtInventario1 {
+    background: url('/dist/img/escritorio.jpeg') center/cover no-repeat;
+
 }
 #formulario-contato {
     margin: @ggg auto;    
@@ -484,10 +510,12 @@ a {
         }           
     }
   }
-
-
-
-
+#consumidor, #artigo {
+    margin: @ggg auto; 
+}
+#artigo{
+    font-family: @font-family-serif;
+}
 //ScrollBar 
 /* width */
 ::-webkit-scrollbar {
