@@ -168,13 +168,29 @@ vitae unde harum maxime earum hic sequi cupiditate odit, nostrum
 perferendis. Obcaecati, veniam.</p>
 `;
 
-var titD2 = document.getElementById('titDestaque2');
-var imgD2 = document.getElementById('imgDestaque2');
-var txtD2 = document.getElementById('txtDestaque2');
-function destaque2(titulo2, imagem2, texto2) {  
+///////////////////////
+// DESTAQUES NA HOME 
+//////////////////////
+// 1
+// var titD1 = document.getElementById('titDestaque1');
+// var imgD1 = document.getElementById('imgDestaque1');
+// var txtD1 = document.getElementById('txtDestaque1');
+// function destaque1(titulo1, texto1) {  
+//   titD1.innerHTML = titulo1;
+//   txtD1.innerHTML = texto1;
+  
+//   imgD1.setAttribute('src', '/dist/img/escritorio.jpeg'); 
+// }
+// 2
+var titD2 = document.getElementById('titDestaque1');
+var imgD2 = document.getElementById('imgDestaque1');
+var txtD2 = document.getElementById('txtDestaque1');
+function destaque2(titulo2, texto2) {  
   titD2.innerHTML = titulo2;
-  imgD2 = imagem2;
   txtD2.innerHTML = texto2;
+ 
+  imgD2.setAttribute('src', '/dist/img/escritorio.jpeg');
 }
 
-destaque2(titDestaq1, imgDestaq1, txtDestaq1);
+// destaque1(titDestaq1, txtDestaq1);
+destaque2(titDestaq1, txtDestaq1);

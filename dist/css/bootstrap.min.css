@@ -7887,11 +7887,13 @@ fieldset[disabled] a#artigos .artigos .col-lg-4 a {
 }
 #motivos h2,
 #motivos2 h2 {
+  margin-top: 0;
   color: #00008a;
 }
 #motivos p.lead,
 #motivos2 p.lead {
   font-family: 'Libre Caslon Text', serif;
+  font-size: 1.0625em;
 }
 #motivos2 {
   background: url('../img/bg-pattern-amarelo.png');
